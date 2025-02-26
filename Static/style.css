@@ -1,1 +1,138 @@
+/* Import Google Fonts for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header Animation */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container for main content (used in index.html, host.html, etc.) */
+.container,
+.section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: slideIn 0.8s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Button styling with hover animation */
+button {
+  background: #fff;
+  color: #764ba2;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  margin: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #f0f0f0;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="file"] {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Video player styling */
+video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Chat box styling */
+#chat-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  height: 200px;
+  overflow-y: auto;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease;
+}
+
+/* Individual chat message styling */
+#chat-box p {
+  margin: 5px 0;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Form styling for login and join forms */
+form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Link styling */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
