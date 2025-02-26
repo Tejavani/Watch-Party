@@ -22,7 +22,19 @@ A simple watch party application that lets a host create a room, upload a movie,
   Built with modern CSS animations and a clean design.
 
 ## Project Structure
-watch-party/ ├── app.py ├── requirements.txt ├── README.md ├── uploads/ # (Directory for uploaded movie files) ├── static/ │ ├── script.js # Client-side JavaScript for video sync and chat │ ├── styles.css # Styling for the application └── templates/ ├── index.html # Landing page: Create/Join Room ├── host.html # Host page: Room info & movie upload └── watch.html # Watch party page:Video player & chat
+watch-party/
+  static/
+    style.css
+    script.js
+  templates/
+    index.html
+    host.html
+    watch.html
+  upload/
+    where the is data is stored
+  app.py
+  requirements.txt
+  readme.md
 
 
 ## Installation
