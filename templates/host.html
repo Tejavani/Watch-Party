@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Host Room - {{ room_code }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Host Room: {{ room_code }}</h1>
+  <p>Upload a movie to start the watch party.</p>
+  <!-- Removed the accept attribute so that all file types are shown -->
+  <form action="{{ url_for('upload_movie') }}" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="room_code" value="{{ room_code }}">
+    <input type="file" name="movie" required>
+    <button type="submit">Upload Movie</button>
+  </form>
+</body>
+</html>

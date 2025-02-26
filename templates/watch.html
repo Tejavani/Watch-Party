@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watch Party - Room {{ room_code }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>Watch Party - Room {{ room_code }}</h1>
+  {% if movie %}
+    <!-- Only the host gets controls -->
+    <video id="video-player" {% if host %}controls{% endif %}>
+      <source src="{{ url_for('serve_video', room_code=room_code) }}">
+      Your browser does not support the video tag.
+    </video>
+  {% else %}
+    <p>Waiting for the host to upload a movie...</p>
+  {% endif %}
+  
+  <div id="chat-box"></div>
+  <input type="text" id="chat-input" placeholder="Type a message">
+  <button id="send-btn">Send</button>
+  
+  <script src="/static/script.js"></script>
+</body>
+</html>
